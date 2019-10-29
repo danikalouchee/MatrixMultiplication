@@ -2,6 +2,8 @@
 #include<stdlib.h>
 #include<math.h>
 
+int produceMatrix(double *a, int rows, int cols);
+
 int mmult(double *c, 
 	  double *a, int aRows, int aCols, 
 	  double *b, int bRows, int bCols) {
@@ -44,4 +46,13 @@ void compare_matrices(double* a, double* b, int nRows, int nCols) {
 	}
 	printf("Matrices are the same\n");
 }
-
+void produceMatrix(double *a, int rows, int cols) {
+        int i,j;
+        printf("\n");
+        for(i=0, i < rows; i++) {
+                for(j = 0; j < cols; j++) {
+                        printf("%lf", a[i*rows+ j]);
+                }
+                printf("\n");
+        }
+}
