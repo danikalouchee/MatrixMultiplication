@@ -51,6 +51,7 @@ int main(int argc, char* argv[])
       cc2  = malloc(sizeof(double) * nrows * nrows);
       mmult(cc2, aa, nrows, ncols, bb, ncols, nrows);
       compare_matrices(cc2, cc1, nrows, nrows);
+
     } else {
       // Slave Code goes here
 	  aa = malloc(sizeof(double) * nrows * ncols);
@@ -72,5 +73,5 @@ void produceMatrix(double *a, int rows, int cols) {
 			printf("%lf", a[i*rows+ j]);
 		}
 		printf("\n");
-	}		
+	}
 }
