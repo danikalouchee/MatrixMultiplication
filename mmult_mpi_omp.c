@@ -68,7 +68,7 @@ int main(int argc, char* argv[])
       int c;
       int lineCount = 0;
       char *p1, *p2, *p3, *p4, *p5, *p6, *p7, *p8;
-      char *pRow1, *pCol1, ppRow2, *pCol2;
+      char *pRow1, *pCol1, pRow2, *pCol2;
       pRow1 = (char *) malloc(8);
       pCol1 = (char *) malloc(8);
       pRow2 = (char *) malloc(8);
@@ -206,7 +206,6 @@ int main(int argc, char* argv[])
       
 	  int i, j;
 	  for(i=1;i<numprocs;i++) {
-		  number *= i;
 		  printf("sending to %d\n", i);
 		  MPI_Send(&(bb[0]), 2*nrows*ncols, MPI_INT, i, 0, MPI_COMM_WORLD);
           MPI_Send(&offset,1, MPI_INT, i, 0, MPI_COMM_WORLD);
@@ -244,7 +243,7 @@ int main(int argc, char* argv[])
       aa = malloc(sizeof(double)*ncols*perRows);
       testCC = malloc(sizeof(double)*nrows*nrows);
       
-      in m,l;
+      int m,l;
       for(m=0; m<ncols*perRows;m++){
         MPI_Recv(&(aa[m]),2,MPI_INT,0,0,MPI_COMM_WORLD,MPI_STATUS_IGNORE);
       }
@@ -263,7 +262,7 @@ int main(int argc, char* argv[])
 void produceMatrix(double *a, int rows, int cols) {
 	int i,j;
 	printf("\n");
-	for(i=0, i < rows; i++) {
+  for(i=0; i < rows; i++) {
 		for(j = 0; j < cols; j++) {
 			printf("%lf", a[i*rows+ j]);
 		}
@@ -271,7 +270,7 @@ void produceMatrix(double *a, int rows, int cols) {
 	}
 }
 
-void produceMatrixToFile(doube *a, int rows, int cols){
+void produceMatrixToFile(double *a, int rows, int cols){
   FILE *file = fopen("out.txt","w");
   
   int i,j;
