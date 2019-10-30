@@ -239,7 +239,7 @@ int main(int argc, char* argv[])
       /* Insert your master code here to store the product into cc1 */
       endtime = MPI_Wtime();
       printf("%f\n",(endtime - starttime));
-      cc2  = malloc(sizeof(double) * xRows * bcols);
+      cc2  = malloc(sizeof(double) * xRows * yCols);
       mmult(cc2, aa, xRows, xCols, bb, yCols, yRows);
       compare_matrices(cc2, cc1, xRows, yCols);
       produceMatrixToFile(cc1,xRows,yCols);
