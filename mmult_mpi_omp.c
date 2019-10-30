@@ -175,8 +175,8 @@ int main(int argc, char* argv[])
           printf("A: %dx%d\tB: %dx%d", row1, cols1, rows2, cols2);
         }
         
-        printMatrix(aa, row1, cols1);
-        printMatrix(bb, rows2, cols2);
+        produceMatrix(aa, row1, cols1);
+        produceMatrix(bb, rows2, cols2);
       }
       
       nrows = row1;
@@ -215,7 +215,7 @@ int main(int argc, char* argv[])
           for (j=0; j< nrows*perRows; j++){
             MPI_Send(&(aa[offset*ncols+j]),2,MPI_INT,i,0,MPI_COMM_WORLD);
           }
-          MPI_Send(&(bb[offset*ncols+j]),2*ncols,MPI_INT,i,0,MPI_COMM_WORLD);
+          MPI_Send(&(bb[offset*nrows]),2*ncols,MPI_INT,i,0,MPI_COMM_WORLD);
           offset+=perRows;
 	  }
       
