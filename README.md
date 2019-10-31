@@ -28,13 +28,13 @@ We used the Trello Project Managment platform to manage, assign and keep track o
 Our Trello Board is located here: https://trello.com/b/J6Pg0Qzh/lab-5-pb-demo <br />
 
 **Development Practice** <br />
-
-**Testing** <br />
-
+The practice we did was tied into our agile methodology. We recognized the basis of the lab depends on the different variations of multiplying, so we made our own branches and focused on our own variations. One by one we would push our variations via draft pull requests and locking mechanisms. After Dani made the testing environment we sat down together so that we could understand how each others algorithms worked in the testing environment. Then the people in charge of the graphs took the data and produced graphs. The algorithms writers stepped back as we entered a testing and quality assurance phase. After being challenged, developers went back in to address any bugs and then the team did a final review. <br /> 
+**Testing**  <br />
+The testing was primarily done by one person to check the algorithms as he would be able to have a clear perspective and focused on end results. We did manual testing of the algorithms but we did it in a developed environment where we could fire off the different variations back to back. The factors and results we were looking for inlcluding speed, cores consumed, and the accuracy of results. <br />
 **Implementation** <br />
-
+We made sure that the notepad had a specific format so that when the input is put in, it will know dimensions adn what numbers to multiply. As long as the format is followed, the program's capabilities are automated. <br />
 **Planning** <br />
-
+We planned out how we were going to produce the graphs and then did automation so that they can be directly done to graphs. We have graphs as proof below. 
 ## Graphs <br />
 
 
