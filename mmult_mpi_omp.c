@@ -175,8 +175,8 @@ int main(int argc, char* argv[])
           printf("A: %dx%d\tB: %dx%d", row1, cols1, rows2, cols2);
         }
         
-        produceMatrix(aa, row1, cols1);
-        produceMatrix(bb, rows2, cols2);
+       // produceMatrix(aa, row1, cols1);
+       // produceMatrix(bb, rows2, cols2);
       }
       
       nrows = row1;
