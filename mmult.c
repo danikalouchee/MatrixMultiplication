@@ -44,4 +44,3 @@ void compare_matrices(double* a, double* b, int nRows, int nCols) {
 	}
 	printf("Matrices are the same\n");
 }
-
