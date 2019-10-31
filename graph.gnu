@@ -6,4 +6,4 @@ set output 'out.png'
 set xlabel 'Matrix size'
 set ylabel 'Time (sec)'
 set title 'Matrix multiplication speed on Wlofgang Cluster'
-plot  "data.txt" using 1:2 title 'Algo-1' with linespoint, "data.txt" using 1:3 title 'Algo-2' with linespoint
+plot "data.txt" using 1:2 title 'w/P' with linespoint, "data.txt" using 1:3 title 'SIMD' with linespoint, "data.txt" using 1:4 title 'OpenMP' with linespoint, "data.txt" using 1:5 title 'MPI' with linespoint
