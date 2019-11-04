@@ -37,4 +37,4 @@ We made sure that the notepad had a specific format so that when the input is pu
 We planned out how we were going to produce the graphs and then did automation so that they can be directly done to graphs. We have graphs as proof below. 
 ## Graphs <br />
 
-
+![graph](https://github.com/3296f19temple/matrix-05-kalouche-panneer-goroshko-sidorov/blob/master/out.png)
